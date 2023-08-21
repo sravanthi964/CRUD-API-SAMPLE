@@ -3,21 +3,16 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
-  pull_request: 
+  pull_request:
     branches: [ "main" ]
-    #allows you to run this workflow manually from the actions tab
-    #name: Manual trigger
-    #on:
-    #workflow_dispatch:
 
 jobs:
 
-  build-container:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      working-directory: CRUD-API-SAMPLE
-      run: docker build . --file Dockerfile --tag my-CRUD-API:$(date +%s)
+      run: docker build . --file Dockerfile --tag my-crud-api-image:$(date +%s)

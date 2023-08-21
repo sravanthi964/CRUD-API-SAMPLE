@@ -2,13 +2,13 @@ name: Docker Image CI
 
 on:
   push:
-    branches: none #[ "main" ]
+    branches: [ "main" ]
   pull_request: 
-    branches: none #[ "main" ]
+    branches: [ "main" ]
     #allows you to run this workflow manually from the actions tab
-    name: Manual trigger
-    on:
-    workflow_dispatch:
+    #name: Manual trigger
+    #on:
+    #workflow_dispatch:
 
 jobs:
 

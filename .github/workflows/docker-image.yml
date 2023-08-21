@@ -6,6 +6,8 @@ on:
   pull_request: 
     branches: none #[ "main" ]
     #allows you to run this workflow manually from the actions tab
+    name: Manual trigger
+    on:
     workflow_dispatch:
 
 jobs:
